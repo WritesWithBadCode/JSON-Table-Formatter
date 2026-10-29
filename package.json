@@ -1,0 +1,10 @@
+{
+  "name": "json-table-formatter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Map arbitrary JSONPaths to readable terminal, CSV, TSV, Markdown or JSON tables",
+  "license": "GPL",
+  "engines": { "node": ">=20" },
+  "bin": { "json-table": "./index.js" },
+  "scripts": { "start": "node index.js --input examples/tls-results.json --config examples/tls-columns.txt", "test": "node --test" }
+}

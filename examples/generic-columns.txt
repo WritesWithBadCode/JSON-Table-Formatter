@@ -1,0 +1,7 @@
+@rows = $.employees[*]
+@missing = (none)
+Name = $.profile.name
+Department = $.department
+City = $.location.city
+Skills = $.skills[*]
+Company = $$.company

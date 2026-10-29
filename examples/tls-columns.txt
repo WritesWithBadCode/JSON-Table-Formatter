@@ -1,0 +1,26 @@
+# Each selected result becomes one table row.
+@rows = $.results[*]
+@join = "; "
+@missing = -
+@maxWidth = 48
+
+Target = $.target.host
+Port = $.target.port
+Status = $.success
+TLS Version = $.negotiated.protocol
+Cipher = $.negotiated.cipher.name
+Remote IP = $.endpoints.remoteAddress
+Certificate Subject = $.certificates[0].subject
+Serial Number = $.certificates[0].serialNumber
+DNS SANs = $.certificates[0].dnsNames[*]
+IP SANs = $.certificates[0].ipAddresses[*]
+SHA-256 = $.certificates[0].fingerprints.sha256
+Subject Key ID = $.certificates[0].subjectKeyIdentifier
+Authority Key ID = $.certificates[0].authorityKeyIdentifier.keyIdentifier
+Key Usage = $.certificates[0].keyUsage[*]
+Extended Key Usage = $.certificates[0].extendedKeyUsage[*].name
+CA = $.certificates[0].basicConstraints.ca
+Valid From = $.certificates[0].validity.notBefore
+Valid Until = $.certificates[0].validity.notAfter
+Error = $.error.message
+Scan Date = $$.generatedAt

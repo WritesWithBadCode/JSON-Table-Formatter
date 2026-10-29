@@ -1,0 +1,12 @@
+{
+  "rows": "$.employees[*]",
+  "format": "table",
+  "join": ", ",
+  "missing": "-",
+  "maxWidth": 0,
+  "columns": [
+    { "header": "Name", "path": "$.profile.name" },
+    { "header": "City", "path": "$.location.city" },
+    { "header": "Company", "path": "$$.company" }
+  ]
+}

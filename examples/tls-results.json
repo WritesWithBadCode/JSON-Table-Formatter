@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-28T20:00:00.000Z",
+  "results": [
+    {
+      "id": "web-1", "success": true,
+      "target": { "host": "www.example.com", "port": 443 },
+      "endpoints": { "remoteAddress": "192.0.2.25", "remotePort": 443 },
+      "negotiated": { "protocol": "TLSv1.3", "cipher": { "name": "TLS_AES_256_GCM_SHA384" } },
+      "certificates": [
+        { "subject": "CN=www.example.com", "serialNumber": "014FAAA",
+          "dnsNames": ["www.example.com", "example.com"], "ipAddresses": [],
+          "fingerprints": { "sha256": "AA:BB:CC:DD" },
+          "subjectKeyIdentifier": "01:02:03",
+          "authorityKeyIdentifier": { "keyIdentifier": "FE:ED" },
+          "keyUsage": ["digitalSignature"],
+          "extendedKeyUsage": [{ "name": "serverAuth" }],
+          "basicConstraints": { "ca": false },
+          "validity": { "notBefore": "2026-01-01T00:00:00.000Z", "notAfter": "2027-01-01T00:00:00.000Z" }
+        }
+      ]
+    },
+    {
+      "id": "mail-2", "success": false,
+      "target": { "host": "smtp.example.com", "port": 587 },
+      "error": { "code": "ECONNREFUSED", "message": "Connection refused" },
+      "certificates": []
+    }
+  ]
+}

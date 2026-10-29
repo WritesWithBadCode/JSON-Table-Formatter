@@ -1,0 +1,7 @@
+{
+  "company": "Northwind Example",
+  "employees": [
+    { "profile": { "name": "Alex" }, "department": "Technology", "location": { "city": "Minneapolis" }, "skills": ["Node.js", "Security"] },
+    { "profile": { "name": "Jordan" }, "department": "Operations", "location": { "city": "Chicago" }, "skills": ["Planning"] }
+  ]
+}
